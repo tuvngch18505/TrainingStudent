@@ -1,0 +1,45 @@
+﻿@model TrainningStudent.Models.Account
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="d-lg-flex half">
+        <div class="bg order-1 order-md-2" style="background-image: url('/Content/images/bg_1.jpg');"></div>
+        <div class="contents order-2 order-md-1">
+
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-7">
+                        <center>  <h1>Training System</h1></center>
+                        <div class="mb-4">
+                            <h3>Sign In</h3>
+                            <p class="mb-4" style="color: black">Welcome Back!</p>
+                            @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+                        </div>
+
+                        <div class="form-group first">
+                            @Html.TextBoxFor(model => model.UserName, "UserName", new { @class = "form-control", @placeholder = "Username", @autoforcus = "autoforcus" })
+                            @Html.ValidationMessageFor(model => model.UserName)
+
+
+                        </div>
+                        <div class="form-group last mb-3">
+                            @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @placeholder = "Password", @autoforcus = "autoforcus" })
+                            @Html.ValidationMessageFor(model => model.Password)
+                        </div>
+
+                        <button type="submit" class="btn btn-block btn-primary">Login</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+}
+

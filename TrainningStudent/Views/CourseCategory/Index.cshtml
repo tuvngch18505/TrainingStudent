@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TrainningStudent.Models.CourseCategory>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_DashBoard.cshtml";
+}
+<br />
+<h2>Manage Category</h2>
+<hr />
+
+<p>@Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary btn-large" })</p>
+
+<div class="card-body">
+    <table class="table" id="datatablesSimple" style="text-align:center">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.CategoryID }, htmlAttributes: new { @class = "btn btn-danger col-md-3" })
+            @Html.ActionLink("Details", "Details", new { id = item.CategoryID }, htmlAttributes: new { @class = "btn btn-danger col-md-3" })
+            @Html.ActionLink("Delete", "Delete", new { id = item.CategoryID }, htmlAttributes: new { @class = "btn btn-danger col-md-3" })
+        </td>
+    </tr>
+        }
+    </table>
+</div>
+
+

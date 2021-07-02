@@ -1,0 +1,49 @@
+﻿
+
+<div id="layoutSidenav">
+
+    <div id="layoutSidenav_nav">
+        @Html.ActionLink("Training System", "Index", "DashBoard", new { area = "" }, new { @class = "navbar-brand" })
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+
+                        @Html.ActionLink("Manage Category", "Index", "CourseCategory", null, new { @class = "btn btn-primary btn-large" })
+                    </a>
+
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+
+                        @Html.ActionLink("Manage Course", "Index", "Courses", null, new { @class = "btn btn-primary btn-large" })
+
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+
+                        @Html.ActionLink("Manage Trainee", "Index", "Trainee", null, new { @class = "btn btn-primary btn-large" })
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+
+                        @Html.ActionLink("Manage Trainer", "Index", "Trainer", null, new { @class = "btn btn-primary btn-large" })
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-b-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+
+                        @Html.ActionLink("Manage Topic", "Index", "Topic", null, new { @class = "btn btn-primary btn-large" })
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                        @Html.ActionLink("Assign Trainer", "Index", "EnrollmentTrainer", null, new { @class = "btn btn-primary btn-large" })
+                    </a>
+
+
+                </div>
+            </div>
+            <div class="sb-sidenav-footer">
+                <div class="small">Logged in as: Admin </div>
+                
+            </div>
+        </nav>
+    </div>
+</div><
+
+

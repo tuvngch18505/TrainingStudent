@@ -1,0 +1,40 @@
+﻿@model TrainningStudent.Models.Course
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_DashBoard.cshtml";
+}
+<br />
+<h2>Delete Course</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseCategory.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseCategory.CategoryName)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-primary btn-large" /> |  @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary btn-large" })
+
+</div>
+    }
+</div>

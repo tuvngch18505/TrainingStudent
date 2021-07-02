@@ -1,0 +1,29 @@
+﻿
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <br />
+        @Html.ActionLink("Traning System", "Index", "DashBoard", null, new { @class = "navbar-brand" })
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <a class="nav-link">
+                        @Html.ActionLink("DashBoard", "Index", "DashBoard", null, new { @class = "btn btn-primary btn-large" })
+                    </a>
+                    <a class="nav-link">
+                        @Html.ActionLink("Profile", "Profile", "TraineeAction", null, new { @class = "btn btn-primary btn-large" })
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+
+                        @Html.ActionLink("MyCourse", "MyCourses", "TraineeAction", null, new { @class = "btn btn-primary btn-large" })
+                    </a>
+
+
+                </div>
+            </div>
+            <div class="sb-sidenav-footer">
+                <div class="small">Logged in as:Trainer</div>
+                Start Bootstrap
+            </div>
+        </nav>
+    </div>
+</div><

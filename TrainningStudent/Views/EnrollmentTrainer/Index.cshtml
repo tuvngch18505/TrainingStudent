@@ -1,0 +1,52 @@
+﻿@model IEnumerable<TrainningStudent.Models.Enrollment>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_DashBoard.cshtml";
+}
+
+<h2 style="text-align:center">Assign Course for Trainer</h2>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary"})
+</p> 
+
+
+<table class="table" id="datatablesSimple" style="text-align:center">
+    <tr>
+        <th>
+            Course Name
+        </th>
+        <th>
+            Trainee Name
+        </th>
+        <th>
+            Trainer Name
+        </th>
+        
+        <th>
+            Action
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Course.CourseName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Trainee.TraineeName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Trainer.TrainerName)
+    </td>
+    <td>
+        @Html.ActionLink("Details", "Details", new { id = item.EnrollmentID }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Edit", "Edit", new { id = item.EnrollmentID }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Delete", "Delete", new { id = item.EnrollmentID }, new { @class = "btn btn-primary" })
+    </td>
+
+</tr>}
+
+</table>

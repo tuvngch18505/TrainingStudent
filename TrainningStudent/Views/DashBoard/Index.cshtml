@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_DashBoard.cshtml";
+}
+
+
+ 
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">Dashboard</h1>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-xl-3 col-md-6 mb-4" style="width: 600px; height:120px">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center">
+                                        WelCome To TrainingSystem
+                                    </div>
+
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center">
+                                        Hi
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <img src="~/Content/images/unnamed.png" alt="Alternate Text" width="80px" />
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-4" style="width: 600px; height:120px">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <h3 id="hvn" style="text-align:center"></h3>
+                                    <h3 id="hvm" style="text-align:center"></h3>
+                                    <script>
+                                        var today = new Date();
+                                        var date = today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear()
+                                        var time = today.getHours() + ":" + today.getMinutes();
+                                        Date: document.getElementById("hvn").innerHTML = date;
+                                        Time: document.getElementById("hvm").innerHTML = time;
+                                    </script>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    
+
+
+
+

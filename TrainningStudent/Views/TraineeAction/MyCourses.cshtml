@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TrainningStudent.Models.Enrollment>
+@{
+    ViewBag.Title = "MyCourses";
+    Layout = "~/Views/Shared/_DashBoard.cshtml";
+}
+<br />
+<h2>MyCourses</h2>
+<hr />
+<table class="table" id="datatablesSimple">
+    <tr>
+        <th>
+            Course Name
+        </th>
+        <th>
+            Trainee Name
+        </th>
+        <th>
+            Traineer Name
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Course.CourseName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Trainee.TraineeName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Trainer.TrainerName)
+    </td>
+</tr>
+}
+
+</table>
+
+
