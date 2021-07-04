@@ -22,5 +22,6 @@ namespace TrainningStudent.Models
         public virtual Trainee Trainee { get; set; }
 
         public virtual Trainer Trainer { get; set; }
+
     }
 }

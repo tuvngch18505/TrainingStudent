@@ -28,10 +28,9 @@ namespace TrainningStudent.Controllers
         public ActionResult MyTopic()
         {
             var userName = User.Identity.Name;
-            var Courses = (from e in db.Course
-                           where e.Topic.Any(m => m.Trainer.TrainerName.Equals(userName))
-                           select e);
-            return View(Courses.ToList());
+
+            var mytopics = from t in db.Topic where t.Trainer.TrainerName.Equals(userName) select t;
+            return View(mytopics.ToList());
         }
         public ActionResult MyCourses()
         {

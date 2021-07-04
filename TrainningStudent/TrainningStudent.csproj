@@ -214,6 +214,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Chosen\chosen-sprite.png" />
+    <Content Include="Content\Chosen\chosen.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap\bootstrap-reboot.css" />
     <Content Include="Content\css\bootstrap\bootstrap.css" />
@@ -237,6 +239,7 @@
     <Content Include="Content\images\bg_1.jpg" />
     <Content Include="Content\images\unnamed.png" />
     <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\chosen.jquery.min.js" />
     <Content Include="Content\js\jquery-3.3.1.min.js" />
     <Content Include="Content\js\main.js" />
     <Content Include="Content\js\owl.carousel.min.js" />
@@ -413,7 +416,6 @@
     <Content Include="Views\Shared\_AdminMenu.cshtml" />
     <Content Include="Views\Shared\_TrainerMenu.cshtml" />
     <Content Include="Views\TrainerAction\Profile.cshtml" />
-    <Content Include="Views\TrainerAction\MyTopic.cshtml" />
     <Content Include="Views\TrainerAction\Edit.cshtml" />
     <Content Include="Views\Trainee\Create.cshtml" />
     <Content Include="Views\Shared\_TraineeMenu.cshtml" />
@@ -426,6 +428,7 @@
     <Content Include="Views\TraineeAction\Profile.cshtml" />
     <Content Include="Views\TraineeAction\Edit.cshtml" />
     <Content Include="Views\TraineeAction\MyCourses.cshtml" />
+    <Content Include="Views\TrainerAction\MyTopic.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

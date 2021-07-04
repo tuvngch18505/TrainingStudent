@@ -1,12 +1,12 @@
-﻿@if (Request.IsAuthenticated)
-{
+﻿
 
+@if (Request.IsAuthenticated)
+{
     <ul class="nav navbar-right btn btn-primary btn-large">
 
         <li>@Html.ActionLink("Logout", "Logout", "Authentic")</li>
 
     </ul>
-
 
 if (User.IsInRole("Trainee"))
  {

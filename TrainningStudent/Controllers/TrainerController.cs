@@ -45,10 +45,7 @@ namespace TrainningStudent.Controllers
         {
             return View();
         }
-
         // POST: Trainers/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
@@ -58,14 +55,11 @@ namespace TrainningStudent.Controllers
             {
                 db.Trainer.Add(trainer);
                 db.SaveChanges();
-
                 AuthenticController.CreateAccount(trainer.TrainerName, "123456", "Trainer");
                 return RedirectToAction("Index");
             }
-
             return View(trainer);
         }
-
         // GET: Trainers/Edit/5
         [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)

@@ -1,45 +1,37 @@
-﻿@model IEnumerable<TrainningStudent.Models.Course>
+﻿@model IEnumerable<TrainningStudent.Models.Topic>
 
-@{
-    ViewBag.Title = "MyTopic";
-    Layout = "~/Views/Shared/_DashBoard.cshtml";
-}
+@{ ViewBag.Title = "MyTopics";
+Layout = "~/Views/Shared/_DashBoard.cshtml"; }
 <br />
-<h2>MyTopic</h2>
+<h2>My Topics</h2>
 <br />
-<hr />
-<table class="table" id="datatablesSimple">
+<table class="table" id="datatablesSimple"style="text-align:center">
     <tr>
         <th>
-            Name
+            @Html.DisplayNameFor(model => model.TopicName)
         </th>
         <th>
-            Topic
+            @Html.DisplayNameFor(model => model.Description)
         </th>
+       
         <th>
-            Categories
+            @Html.DisplayNameFor(model => model.Trainer.TrainerName)
         </th>
-        
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CourseName)
-            </td>
-            <td>
-                @foreach (var topic in item.Topic)
-                {
-                    <b>@topic.TopicName</b>
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CourseCategory.CategoryName)
-            </td>
-            
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.TopicName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
 
-        </tr>
-    }
+    <td>
+        @Html.DisplayFor(modelItem => item.Trainer.TrainerName)
+    </td>
+</tr>}
 
 </table>

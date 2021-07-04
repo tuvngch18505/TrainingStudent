@@ -24,9 +24,7 @@ namespace TrainningStudent.Controllers
         {
             var userStore = new UserStore<IdentityUser>();
             var manager = new UserManager<IdentityUser>(userStore);
-
             var user = manager.Find(acc.UserName, acc.Password);
-
             if (user != null)
             {
                 var authenticationManager = HttpContext.GetOwinContext().Authentication;
@@ -34,8 +32,7 @@ namespace TrainningStudent.Controllers
 
                 authenticationManager.SignIn(new AuthenticationProperties { }, userIdentity);
                 return RedirectToAction("Index", "DashBoard");
-            }
-            
+            }  
             else
             {
                 ModelState.AddModelError("", "Username or Password incorrect");

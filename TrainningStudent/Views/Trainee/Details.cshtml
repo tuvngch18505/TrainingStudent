@@ -20,14 +20,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Account)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Account)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Majors)
         </dt>
 
@@ -43,13 +35,6 @@
             @Html.DisplayFor(model => model.Classroom)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CourseID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CourseID)
-        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.Location)
@@ -63,6 +48,6 @@
 </div>
 <br />
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TraineeID }) | @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary btn-large" })
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TraineeID }, new { @class = "btn btn-primary"}) | @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary btn-large" })
     
 </p>

@@ -20,7 +20,6 @@ namespace TrainningStudent.Controllers
 
             return View(db.Trainee.ToList());
         }
-
         // GET: Trainees/Details/5
         public ActionResult Details(int? id)
         {
@@ -33,19 +32,15 @@ namespace TrainningStudent.Controllers
             {
                 return HttpNotFound();
             }
-            //ViewBag.EnrollmentID = new SelectList(db.Trainees, "CourseID", "CourseName", trainee.Enrollments);
             return View(trainee);
         }
-
         // GET: Trainees/Create
         [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
         }
-
         // POST: Trainees/Create
-   
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
@@ -55,14 +50,11 @@ namespace TrainningStudent.Controllers
             {
                 db.Trainee.Add(trainee);
                 db.SaveChanges();
-
                 AuthenticController.CreateAccount(trainee.TraineeName, "123456", "Trainee");
                 return RedirectToAction("Index");
             }
-
             return View(trainee);
         }
-
         // GET: Trainees/Edit/5
         [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
@@ -78,10 +70,7 @@ namespace TrainningStudent.Controllers
             }
             return View(trainee);
         }
-
         // POST: Trainees/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
@@ -111,7 +100,6 @@ namespace TrainningStudent.Controllers
             }
             return View(trainee);
         }
-
         // POST: Trainees/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
